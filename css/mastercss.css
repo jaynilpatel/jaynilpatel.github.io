@@ -460,8 +460,10 @@ pre {
     background: hsla(0, 0%, 0%, 0.04);
     border-radius: 3px;
     overflow: auto;
-    word-wrap: normal;
     padding: 1.55rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
 }
 
 table {
@@ -587,13 +589,13 @@ ul li {
     padding-left: 0;
 }
 
-li > ol {
+li>ol {
     margin-left: 1.55rem;
     margin-bottom: calc(1.55rem / 2);
     margin-top: calc(1.55rem / 2);
 }
 
-li > ul {
+li>ul {
     margin-left: 1.55rem;
     margin-bottom: calc(1.55rem / 2);
     margin-top: calc(1.55rem / 2);
@@ -611,7 +613,7 @@ p *:last-child {
     margin-bottom: 0;
 }
 
-li > p {
+li>p {
     margin-bottom: calc(1.55rem / 2);
 }
 
@@ -738,4 +740,24 @@ pre {
     height: 99vh;
     width: 100%;
     z-index: -1;
+}
+
+.notes{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.55rem;
+    font-size: 1rem;
+    line-height: 2;
+    background: hsla(0, 0%, 0%, 0.226);
+    border-radius: 3px;
+    overflow: auto;
+    padding: 1.55rem;
+    text-align: left;
+    font-family: monospace, monospace;
+    font-size: 1em
 }
