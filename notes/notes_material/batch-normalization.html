@@ -11785,7 +11785,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Batch Normalization is a technique used to address the vanishing/exploding gradients problems. The technique consists of adding operations such as zero centering, normalizing the inputs, scaling and shifting the result. These sequence of operations are added just before the activation function of each layer of our deep neural network.</p>
 <p>If you want to dive into the mathematical details of each of these operations, please refer to the original paper "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift" by Sergey Ioffe and Christian Szegedy (<a href="https://arxiv.org/pdf/1502.03167v3.pdf">https://arxiv.org/pdf/1502.03167v3.pdf</a>).</p>
-<p>Here I will be showing you how you can implement the batch normalization on the MNIST dataset using tensorflow. For starters, tensorflow provides a <i>tf.nn.batch_normalization()</i> function that will center and normalizes the inputs. The operations requires the mean and the standard deviation of the mini-batch data (during training) or of the full dataset (during testing) which must be manually computed and passed as parameter to this function. Since tensorflow also provides <i>tf.layers.batch_normalization() </i> which will compute the mean and standard deviation for us, I will be using this.</p>
+<p>Here I will be showing you how you can implement batch normalization on the MNIST dataset using tensorflow. For starters, tensorflow provides a <i>tf.nn.batch_normalization()</i> function that will center and normalizes the inputs. The operations requires the mean and the standard deviation of the mini-batch data (during training) or of the full dataset (during testing) which must be manually computed and passed as parameter to this function. Since tensorflow also provides <i>tf.layers.batch_normalization() </i> which will compute the mean and standard deviation for us, I will be using this.</p>
 
 </div>
 </div>
@@ -11794,7 +11794,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First lets import the required libraries.</p>
+<p>First, let's import the required libraries.</p>
 
 </div>
 </div>
@@ -11836,7 +11836,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we will import the MNIST dataset and scale each the pixel values of the images between 0 and 1. Next we will be divide the validation and training data.</p>
+<p>Now we will import the MNIST dataset and scale each the pixel values of the images between 0 and 1. Next we will divide the validation and training data.</p>
 
 </div>
 </div>
@@ -12088,7 +12088,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The batch normalization will create a few extra operations which needs to be evaluated at each step during the training process which will help it to update the moving averages(note that these moving averages will be needed to compute the training set's mean and standard deviation).</p>
+<p>The batch normalization will create a few extra operations which need to be evaluated at each step during the training process which will help it to update the moving averages(note that these moving averages will be needed to compute the training set's mean and standard deviation).</p>
 
 </div>
 </div>
@@ -12183,8 +12183,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That's not a great accuracy especially for MNIST. It is certain, that if we train for longer it will get much better accuracy, but with such a shallow network, batch normalization and ELU are unlikely to have very positive impact. They behave better mostly for much deeper networks when dealing with large datasets. But I hope you have got a gist about the implemention of batch normalization in tensorflow.</p>
-<p>The full code at: <a href="https://github.com/jaynilpatel/mnist/blob/master/batch_normalization-mnist.py">https://github.com/jaynilpatel/mnist/blob/master/batch_normalization-mnist.py</a></p>
+<p>That's not a great accuracy, especially for MNIST. It is certain, that if we train for longer it will get much better accuracy, but with such a shallow network, batch normalization and ELU are unlikely to have a very positive impact. They behave better mostly for much deeper networks when dealing with large datasets. But I hope you have got a gist about the implementation of batch normalization in Tensorflow.</p>
+<p>Full code at: <a href="https://github.com/jaynilpatel/mnist/blob/master/batch_normalization-mnist.py">https://github.com/jaynilpatel/mnist/blob/master/batch_normalization-mnist.py</a></p>
 
 </div>
 </div>
