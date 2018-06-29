@@ -753,11 +753,12 @@ pre {
     margin-bottom: 1.55rem;
     font-size: 1rem;
     line-height: 2;
-    background: hsla(0, 0%, 0%, 0.226);
+    background: hsla(0, 0%, 0%, 0.226); 
+    /*background-color: hsl(0, 0%, 100%); */
     border-radius: 3px;
     overflow: auto;
     padding: 1.55rem;
     text-align: left;
-    font-family: monospace, monospace;
+    
     font-size: 1em
 }
