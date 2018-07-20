@@ -52,6 +52,7 @@ a {
 a:active,
 a:hover {
     outline-width: 0
+    
 }
 
 abbr[title] {
@@ -743,22 +744,16 @@ pre {
 }
 
 .notes{
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.55rem;
+    margin: 0 0 1.55rem 0;
+    padding: 0;
     font-size: 1rem;
-    line-height: 2;
+    line-height: 1.8;
     background: hsla(0, 0%, 0%, 0.226); 
     /*background-color: hsl(0, 0%, 100%); */
     border-radius: 3px;
     overflow: auto;
     padding: 1.55rem;
     text-align: left;
-    
-    font-size: 1em
+    max-width: 920px;
+    font-size: 1em;
 }
