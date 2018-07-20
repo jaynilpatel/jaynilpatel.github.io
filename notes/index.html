@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="icon" href="../static/user.png">
     <link rel="stylesheet" href="../css/mastercss.css">
     <title>Jaynil</title>
@@ -21,10 +23,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#222">
 
 
+
     <style>
-        a:hover{color: rgb(100, 209, 238);}
-        a:active{color: rgb(100, 209, 238);}
-        a{text-decoration: underline;}
+        a:hover {
+            color: #64d1ee;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+        a:active{
+            color:#64d1ee;
+        }
+        button {
+            outline: 0;
+            background: #222;
+            border: none;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+        }
     </style>
 </head>
 
@@ -42,149 +58,180 @@
             </h5>
         </div>
         <div style="margin:0 auto;max-width:960px;padding:1.55rem 1.1625rem;padding-top:0;">
-                <div style="text-align:center;">
-                    <div style="padding-bottom:40px;">
-                        <span style="-ms-transform-origin:25%;-webkit-transform:rotate(45deg);
+            <div style="text-align:center;">
+                <div style="padding-bottom:40px;">
+                    <span style="-ms-transform-origin:25%;-webkit-transform:rotate(45deg);
                         -ms-transform:rotate(45deg);-webkit-transform-origin:25%;z-index:-1;position:absolute;
                         transform-origin:5%;border-top:1px solid #D4AC0D;width:60px;transform:rotate(50deg);"></span>
-                        <h2>notes</h2>
-                    </div>
+                    <h2>notes</h2>
                 </div>
+            </div>
 
-                
-                  
-                <div style="max-width:1000px; text-align:left; color: white">
-                    <div class="notes">
-                        <h4>1)
-                            classifying images of dogs and cats using machine learning
-                        </h4>
-                        
-                        <div style="text-align: justify">
-                            
-                            No introduction is needed for this problem, because first, the problem statement is pretty much intuitive, and second, this
-                            is an infamous dogs vs cats classification problem which you would have definitely come acrossed,
-                            if you are into deep learning. The deep learning model which i have used is convolutional neural
-                            network since it performs well when dealing with image data. The data was available at
-                            <i>https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data</i>. This resource consists
-                            of 25,000 labeled images for training the model and 12,500 images for testing the model.
-                        </div>
-                        <br>
-                        <b>
-                            central language :</b> python
-                        <br>
-                        <b>
-                            key libraries/frameworks :</b> tflearn
+
+
+            <div style="max-width:1000px; text-align:left; color: white; font-size: 1rem">
+                <div class="container notes">
+
+                    <h4>1) classifying images of dogs and cats using machine learning</h4>
+                    <b>central language :</b> python
+                    <br>
+                    <b>libraries/frameworks :</b> tflearn
+                    <br>
+                    <br>
+                    <div id="note1" class="collapse" style="text-align: justify;">
+                        No introduction is needed for this problem, because first, the problem statement is pretty much intuitive, and second, this
+                        is an infamous dogs vs cats classification problem which you would have definitely come acrossed,
+                        if you are into deep learning. The deep learning model which i have used is convolutional neural
+                        network since it performs well when dealing with image data. The data was available at
+                        <i>https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data</i>. This resource consists of 25,000
+                        labeled images for training the model and 12,500 images for testing the model.
                         <br>
                         <br>
                         <a href="notes_material/dogsVScats.html" target="_blank">here is the notebook</a>
+                        <br>
+                        <br>
                     </div>
-                    
-                    <div class="notes">
-                        <h4>2) predicting california's housing prices using machine learning
-                        </h4>
-                        
-                        <div style="text-align: justify">
-                            The goal here is to build a machine learning model to predict housing prices in California using the California Census Data.
-                            The data has metrics such as population, median income, median housing prices, and so on. The
-                            data was mostly raw and lacked any form of preprocessing. Hence a lot of time was invested in
-                            processing and cleaning the data, thus getting it ready for a mathematical model to gain insights.
-                            The data was tested with linear-regression, decision-tree-regressor and random-forest-regressor.
-                        </div>
-                        <br>
-                        <b>
-                            central language :</b> python
-                        <br>
-                        <b>
-                            key libraries/frameworks :</b> scikit-learn, matplotlib
+                    <center>
+                        <button type="button" class="" data-toggle="collapse" data-target="#note1">Read</button>
+                    </center>
+                </div>
+
+                <div class="container notes">
+                    <h4>2) predicting california's housing prices using machine learning</h4>
+                    <b>central language :</b> python
+                    <br>
+                    <b>libraries/frameworks :</b> scikit-learn, matplotlib
+                    <br>
+                    <br>
+                    <div id="note2" class="collapse" style="text-align: justify;">
+                        The goal here is to build a machine learning model to predict housing prices in California using the California Census Data.
+                        The data has metrics such as population, median income, median housing prices, and so on. The data
+                        was mostly raw and lacked any form of preprocessing. Hence a lot of time was invested in processing
+                        and cleaning the data, thus getting it ready for a mathematical model to gain insights. The data
+                        was tested with linear-regression, decision-tree-regressor and random-forest-regressor.
                         <br>
                         <br>
                         <a href="notes_material/Housing.html" target="_blank">here is the notebook</a>
+                        <br>
+                        <br>
                     </div>
-                    <div class="notes">
-                        <h4> 3) mnist - a study of m.l. classification
-                        </h4>
-                        
-                        <div style="text-align: justify">
-                            The MNIST dataset is a set of 70,000 small images of digits handwritten by high 
-                            school students and employees of the US Census Bureau.Each image is labeled with the digit it 
-                            represents. It is a perfect database for people who want to try learning techniques and pattern 
-                            recognition methods on real-world data while spending minimal efforts on preprocessing and formatting. 
-                            Whenever people come up with a new classification algorithm, they are curious to see how it will
-                            perform on MNIST. Whenever someone learns Machine Learning, sooner or later they tackle MNIST.
-                        </div>
-                        <br>
-                        <b>
-                            central language :</b> python
-                        <br>
-                        <b>
-                            key libraries/frameworks :</b> scikit-learn
+                    <center>
+                        <button type="button" class="" data-toggle="collapse" data-target="#note2">Read</button>
+                    </center>
+                </div>
+
+                <div class="container notes">
+                    <h4>3) mnist - a study of m.l. classification</h4>
+                    <b>central language :</b> python
+                    <br>
+                    <b>libraries/frameworks :</b> scikit-learn
+                    <br>
+                    <br>
+                    <div id="note3" class="collapse" style="text-align: justify;">
+                        The MNIST dataset is a set of 70,000 small images of digits handwritten by high 
+                        school students and employees of the US Census Bureau.Each image is labeled with the digit it 
+                        represents. It is a perfect database for people who want to try learning techniques and pattern 
+                        recognition methods on real-world data while spending minimal efforts on preprocessing and formatting. 
+                        Whenever people come up with a new classification algorithm, they are curious to see how it will
+                        perform on MNIST. Whenever someone learns Machine Learning, sooner or later they tackle MNIST.
                         <br>
                         <br>
                         <a href="notes_material/mnist_classification.html" target="_blank">here is the notebook</a>
+                        <br>
+                        <br>
                     </div>
-                    <div class="notes">
-                        <h4>4) machine learning + titanic = ♥‿♥
-                        </h4>
-    
-                        <div style="text-align: justify">
-                            The challenge here is to complete the analysis of what sorts of people were likely 
-                            to survive the most infamous shipwrecks in history. In particular, the goal is to apply the
-                            tools of machine learning to predict which passengers survived the tragedy, i.e to predict
-                            if a passenger survived the sinking of the Titanic or not.
-                        </div>
-                        <br>
-                        <b>
-                            central language :</b> python
-                        <br>
-                        <b>
-                            key libraries/frameworks :</b> scikit-learn
+                    <center>
+                        <button type="button" class="" data-toggle="collapse" data-target="#note3">Read</button>
+                    </center>
+                </div>
+
+                <div class="container notes">
+                    <h4>4) machine learning + titanic = ♥‿♥</h4>
+                    <b>central language :</b> python
+                    <br>
+                    <b>libraries/frameworks :</b> scikit-learn
+                    <br>
+                    <br>
+                    <div id="note4" class="collapse" style="text-align: justify;">
+                        The challenge here is to complete the analysis of what sorts of people were likely 
+                        to survive the most infamous shipwrecks in history. In particular, the goal is to apply the
+                        tools of machine learning to predict which passengers survived the tragedy, i.e to predict
+                        if a passenger survived the sinking of the Titanic or not.
                         <br>
                         <br>
                         <a href="notes_material/titanic.html" target="_blank">here is the notebook</a>
+                        <br>
+                        <br>
                     </div>
+                    <center>
+                        <button type="button" class="" data-toggle="collapse" data-target="#note4">Read</button>
+                    </center>
+                </div>
 
-                    <div class="notes">
-                        <h4>5) implementing batch normalization in tensorflow
-                        </h4>
-    
-                        <div style="text-align: justify">
-                            Training Deep Neural Networks is complicated by the fact that the distribution of each layer's 
-                            inputs changes during training, as the parameters of the previous layers change. This slows down
-                            the training by requiring lower learning rates and careful parameter initialization, and makes it 
-                            notoriously hard to train models with saturating nonlinearities.
-                            Batch Normalization is used to address this kind of problems known as vanishing/exploding gradients
-                            problems. The technique consists of adding operations such as zero centering, 
-                            normalizing the inputs, scaling and shifting the results. These sequence of 
-                            operations are added just before the activation function of each layer of our
-                            deep neural network.<br><br>
-                            According to the original paper by Sergey Ioffe, Google Inc and Christian Szegedy, Google Inc (arXiv:1502.03167 [cs.LG]), 
-                            Batch Normalization achieves the same accuracy with 14 times fewer training steps, and beats the original model by a 
-                            significant margin. Using an ensemble of batch-normalized networks, they improve upon the best published result on ImageNet 
-                            classification: reaching 4.9% top-5 validation error (and 4.8% test error), exceeding the accuracy of human 
-                            raters.<br>
-                            Here I will be showing you how you can implement batch normalization on the MNIST dataset using tensorflow.
-                            
-                        </div>
-                        <br>
-                        <b>
-                            central language :</b> python
-                        <br>
-                        <b>
-                            key libraries/frameworks :</b> tensorflow
+                <div class="container notes">
+                    <h4>5) implementing batch normalization in tensorflow</h4>
+                    <b>central language :</b> python
+                    <br>
+                    <b>libraries/frameworks :</b> tensorflow
+                    <br>
+                    <br>
+                    <div id="note5" class="collapse" style="text-align: justify;">
+                        Training Deep Neural Networks is complicated by the fact that the distribution of each layer's 
+                        inputs changes during training, as the parameters of the previous layers change. This slows down
+                        the training by requiring lower learning rates and careful parameter initialization, and makes it 
+                        notoriously hard to train models with saturating nonlinearities.
+                        Batch Normalization is used to address this kind of problems known as vanishing/exploding gradients
+                        problems. The technique consists of adding operations such as zero centering, 
+                        normalizing the inputs, scaling and shifting the results. These sequence of 
+                        operations are added just before the activation function of each layer of our
+                        deep neural network.<br><br>
+                        According to the original paper by Sergey Ioffe, Google Inc and Christian Szegedy, Google Inc (arXiv:1502.03167 [cs.LG]), 
+                        Batch Normalization achieves the same accuracy with 14 times fewer training steps, and beats the original model by a 
+                        significant margin. Using an ensemble of batch-normalized networks, they improve upon the best published result on ImageNet 
+                        classification: reaching 4.9% top-5 validation error (and 4.8% test error), exceeding the accuracy of human 
+                        raters.<br>
+                        Here I will be showing you how you can implement batch normalization on the MNIST dataset using tensorflow.
                         <br>
                         <br>
                         <a href="notes_material/batch-normalization.html" target="_blank">here is the notebook</a>
+                        <br>
+                        <br>
                     </div>
-
-                    <br>
-                    <div class="notes">
-                        more notes soon to follow...
-                    </div>
+                    <center>
+                        <button type="button" class="" data-toggle="collapse" data-target="#note5">Read</button>
+                    </center>
                 </div>
-            
+                
+                <!--
+                <div class="container notes">
+                        <h4></h4>
+                        <b>central language :</b> 
+                        <br>
+                        <b>libraries/frameworks :</b> 
+                        <br>
+                        <br>
+                        <div id="note<with note number>" class="collapse" style="text-align: justify;">
+                            Summary
+                            <br>
+                            <br>
+                            <a href="#" target="_blank">here is the notebook</a>
+                            <br>
+                            <br>
+                        </div>
+                        <center>
+                            <button type="button" class="" data-toggle="collapse" data-target="#note<with note number>">Read</button>
+                        </center>
+                </div>
+                -->
+                <br>
+                <div class="container notes">
+                        more notes soon to follow...
+                </div>
+            </div>
+
         </div>
     </div>
-    
+
     <div style=" max-width:960px;margin:auto;text-align:center;padding:0rem 0rem;color:#424949; ">
         Made using&nbsp;
         <i class="fa fa-coffee " style="font-size:14px "> </i> and
