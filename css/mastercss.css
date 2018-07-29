@@ -757,3 +757,20 @@ pre {
     max-width: 920px;
     font-size: 1em;
 }
+
+button {
+    outline: 0;
+    background: #222;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    float: right;
+}
+a {
+    text-decoration: underline;
+}
+a:hover {
+    color: #64d1ee;
+}
+a:active {
+    color:#64d1ee;
+}
