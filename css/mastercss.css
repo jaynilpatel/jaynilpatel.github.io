@@ -774,3 +774,8 @@ a:hover {
 a:active {
     color:#64d1ee;
 }
+.btn:focus{
+    outline: none !important;
+    box-shadow: none;
+ }
+ 
