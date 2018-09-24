@@ -778,4 +778,26 @@ a:active {
     outline: none !important;
     box-shadow: none;
  }
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #222222;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #222222;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AC0D;
+}
  
