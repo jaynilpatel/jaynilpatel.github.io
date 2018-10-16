@@ -801,3 +801,8 @@ a:active {
     background: #D4AC0D;
 }
  
+/* Notes Images */
+.notes img{
+    max-width: 400px;
+    height: auto;
+}
