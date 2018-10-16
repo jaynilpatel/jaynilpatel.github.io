@@ -803,6 +803,7 @@ a:active {
  
 /* Notes Images */
 .notes img{
+    width: 90%;
     max-width: 400px;
     height: auto;
 }
