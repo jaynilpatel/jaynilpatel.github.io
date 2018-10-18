@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jaynil's Resume</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700|Vollkorn:400italic,400,700' rel='stylesheet'
+    type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <div class="resume-container" ng-app="resume">
+    <article itemscope itemtype="http://schema.org/Person">
+      <header role="banner" ng-controller="personCtrl">
+        <img itemprop="image" src="{{ personInfo.img }}" alt="{{ personInfo.name }}" title="{{ personInfo.name }}"
+          class="resume-image" />
+        <h1 itemprop="name">{{ personInfo.name }}</h1>
+        <h2 itemprop="description">{{ personInfo.description }}</h2>
+        <address class="contact-info">
+          <a href="{{ personInfo.phone.url }}" itemprop="telephone" target="_blank" class="phone-number">{{
+            personInfo.phone.text }}</a>
+          <a href="{{ personInfo.email.url }}" itemprop="email" target="_blank" class="email-address">{{
+            personInfo.email.text }}</a>
+          <a href="{{ social.url }}" itemprop="url" target="_blank" class="icon" ng-repeat="social in personInfo.social"><i
+              class="fab {{ social.icon }}"></i></a>
+        </address>
+      </header>
+
+      <section class="education-section" ng-controller="educationCtrl">
+        *not responsive on chrome mobile. will fix soon! <br><br>
+        <h1>Education</h1>
+        <ul>
+          <li ng-repeat="school in schools">
+            <h2>{{ school.program }},</h2>
+            <div itemscope itemtype="http://schema.org/School" class="school-name-location-date-container">
+              <span itemprop="name">{{ school.name }},</span>
+              <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address-container">
+                <span itemprop="addressLocality" class="school-location">{{ school.city }}</span>,<abbr itemprop="addressRegion"
+                  title="{{ school.state }}" class="state-abbr">{{ school.stateAbbr }}</abbr>
+              </div>
+              <span class="school-dates">({{ school.dates }})</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="languages-section" ng-controller="languagesCtrl">
+        <h1>Coding</h1>
+        <ul class="languages-list">
+          <li class="language-tool-column" ng-repeat="language in languages">
+            <h2 class="language-name">{{ language.name }}</h2>
+            <ul class="secondary-languages-list">
+              <li ng-repeat="type in language.types">{{ type }}</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="tools-section" ng-controller="toolsCtrl">
+        <h1>Tools</h1>
+        <ul class="tools-list">
+          <li class="language-tool-column" ng-repeat="tool in tools">
+            <h2 class="tool-type">{{ tool.name }}</h2>
+            <ul class="secondary-tools-list">
+              <li ng-repeat="type in tool.types">{{ type }}</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="experience-section" ng-controller="organizationCtrl">
+        <h1>Internships/Training</h1>
+        <ul class="work-experience-list">
+          <li ng-repeat="organization in organizations">
+            <div class="organization-heading" itemscope itemtype="http://schema.org/Organization">
+              <a href="{{ organization.url }}" itemprop="sameAs" title="{{ organization.name }}">
+                <h2 itemprop="name" class="organization-name">{{ organization.name }}</h2>
+              </a>
+            </div>
+            <span class="organization-dates">{{ organization.dates }}</span>
+            <div ng-repeat="position in organization.positions">
+              <h3 class="position-title">{{ position.title }}</h3>
+              <ul class="tertiary-work-experience-list">
+                <li ng-repeat="responsibility in position.responsibilities">{{ responsibility }}</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="hands-on-section" ng-controller="handsOnCtrl">
+        <h1>Hands-On</h1>
+        <div class="hands-on-container" ng-repeat="project in projects">
+          <a href="{{ project.url }}" target="_blank">
+            <h2 class="project-name">{{ project.name }}</h2>
+          </a>
+          <span class="project-tools">{{ project.tools }}</span>
+          <p class="project-description">{{ project.description }}</p>
+        </div>
+        <center>
+          <br />
+          <h3><a href="https:github.com/jaynilpatel"><u>more on GitHub</u></a></h3><br>
+        </center>
+      </section>
+
+      <section class="publications-section" ng-controller="publicationsCtrl">
+        <h1>Publications</h1>
+        <div class="publications-container" ng-repeat="publication in publications">
+          <a href="{{ publication.url }}" target="_blank">
+            <h2 class="publication-name">{{ publication.name }}&nbsp;&nbsp;<i class="fas fa-external-link-alt fa-xs"
+                style="color: #888; font-size:0.8rem"></i></h2>
+          </a><br />
+          <span class="publication-journal">{{ publication.journal }}</span>
+          <p class="publication-description"><br />{{ publication.description }}</p>
+        </div>
+      </section>
+
+      <section class="languages-section" ng-controller="interestsCtrl">
+        <h1>Areas of Interest</h1>
+        <ul class="interests-list">
+          <li class="interest-tool-column" ng-repeat="interest in interests">
+            <h2 class="interest-name">{{ interest.area }}</h2>
+          </li>
+        </ul>
+      </section>
+      <hr class="style-eight">
+      <section class="view-pdf">
+        <div>
+          <center>
+            <a class="pdf-section" target="_blank" href="https://drive.google.com/file/d/1HxAcARo6SB0WGZeKuLYF3P0Ad3p6K9fI/view">
+              <img src="resume_pdf.PNG" height="auto" width="180px" /><br/>
+              <u>Open PDF version</u>
+            </a>
+          </center>
+        </div>
+
+      </section>
+
+    </article>
+
+    <!-- Footer -->
+    <div style="max-width:960px;margin:auto;text-align:center;padding:1rem 0rem;color:#888;font-family: Open Sans, sans-serif">Made
+      using&nbsp;
+      <i class="fa fa-coffee"> </i>&nbsp;&nbsp;and&nbsp;
+      <i class="fa fa-music"></i>
+    </div>
+    <!-- //Footer -->
+  </div>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
