@@ -52,7 +52,6 @@ a {
 a:active,
 a:hover {
     outline-width: 0
-    
 }
 
 abbr[title] {
@@ -743,12 +742,12 @@ pre {
     z-index: -1;
 }
 
-.notes{
+.notes {
     margin: 0 0 1.55rem 0;
     padding: 0;
     font-size: 1rem;
     line-height: 1.8;
-    background: hsla(0, 0%, 0%, 0.226); 
+    background: hsla(0, 0%, 0%, 0.226);
     /*background-color: hsl(0, 0%, 100%); */
     border-radius: 3px;
     overflow: auto;
@@ -765,19 +764,23 @@ button {
     padding: 0.5rem 1rem 0.5rem 1rem;
     float: right;
 }
+
 a {
     text-decoration: underline;
 }
+
 a:hover {
     color: #64d1ee;
 }
+
 a:active {
-    color:#64d1ee;
+    color: #64d1ee;
 }
-.btn:focus{
+
+.btn:focus {
     outline: none !important;
     box-shadow: none;
- }
+}
 
 ::-webkit-scrollbar {
     width: 3px;
@@ -800,10 +803,70 @@ a:active {
 ::-webkit-scrollbar-thumb:hover {
     background: #D4AC0D;
 }
- 
+
 /* Notes Images */
-.notes img{
+.notes img {
     width: 90%;
     max-width: 400px;
     height: auto;
+}
+
+
+/* Header */
+canvas,
+#overlay {
+    position: absolute;
+}
+
+#canvas {
+    top: 0px !important;
+    left: 0px !important;
+}
+
+.col-3 {
+    padding: 0px;
+}
+
+#overlay {
+    top: 50px;
+}
+
+#header {
+    width: 50vw;
+    z-index: 1000;
+}
+
+@media only screen and (min-width: 968px) {
+    #header {
+        width: 100vw;
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #canvas {
+        min-height: 200px;
+    }
+
+    #header h4 {
+        font-size: 14px;
+    }
+
+    #header h2 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #canvas {
+        min-height: 80px;
+    }
+
+    #header {
+        width: 100vw;
+    }
+
+    #overlay {
+        top: 20px;
+    }
 }
