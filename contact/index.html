@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,13 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-
     <link rel="icon" href="../static/user.png">
     <link rel="stylesheet" href="../css/mastercss.css">
     <!-- Chrome, Firefox OS and Opera -->
@@ -24,48 +22,69 @@
     <meta name="msapplication-navbutton-color" content="#222">
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#222">
+
+    <title>Jaynil</title>
+
     <style>
         img {
             border: 2px solid #424949;
             padding: 3px;
         }
     </style>
-    <title>Jaynil</title>
 </head>
 
-<body style="background-color:#222;color:white; overflow-x: hidden; ">
-    <div>
-        <div style="padding:3.5rem 0rem 0rem 0rem;display:flex;flex-direction:row;justify-content:space-around;">
-            <h4>
-                <a style="color:white;text-decoration:none;" href="../index.html">Jaynil Patel</a>
-            </h4>
-        </div>
-        <div class="container" style="max-width: 960px; padding: 1.5rem 0rem 5rem 0rem">
+
+
+
+<body style="background-color:#222;color:white; overflow-x: hidden;">
+
+    <canvas id="canvas" style="top: 0px !important; left: 0px !important"></canvas>
+    <div class="canvas-text-container"></div>
+    <div class="canvas-big-text"></div>
+    <div class="canvas-text"></div>
+    <div id="overlay">
+        <div class="container" id="header">
             <center>
+                <a style="color:white;text-decoration:none;" href="../index.html">
+                    <h3> Jaynil Patel</h3>
+                </a>
                 <div class="row">
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../about/index.html">about</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../about/index.html">
+                            <h4>about</h4>
+                        </a>
                     </div>
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../contact/index.html">contact</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../contact/index.html">
+                            <h4>contact</h4>
+                        </a>
                     </div>
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../notes/index.html">notes</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../notes/index.html">
+                            <h4>notes</h4>
+                        </a>
                     </div>
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../journal/index.html">journal</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../journal/index.html">
+                            <h4>journal</h4>
+                        </a>
                     </div>
                 </div>
             </center>
-        </div>
-        <div style="text-align:center;">
-            <div style="padding-bottom:40px;">
-                <span style="-ms-transform-origin:25%;-webkit-transform:rotate(45deg);
+
+            <div style="text-align:center;">
+                <div style="padding-bottom:40px; padding-top: 10vw">
+                    <span style="-ms-transform-origin:25%;-webkit-transform:rotate(45deg);
                     -ms-transform:rotate(45deg);-webkit-transform-origin:25%;z-index:-1;position:absolute;
                     transform-origin:5%;border-top:1px solid #D4AC0D;width:80px;transform:rotate(155deg);"></span>
-                <h2>contact</h2>
+                    <h2>contact</h2>
+                </div>
             </div>
+            
         </div>
+
+
+
         <div class="container" style="padding:4rem 2%;">
             <!-- start of row 1 -->
             <div class="row">
@@ -73,7 +92,7 @@
                     <center>
                         <h3>linkedin</h3>
                         <div style="max-width:70%;">
-                            <a href="https://www.linkedin.com/in/jaynil-patel-48b43212b/" target="_blank" style="color:white;text-decoration:none;
+                            <a href="https://www.linkedin.com/in/jaynil" target="_blank" style="color:white;text-decoration:none;
                             position:relative;">
                                 <img src="../static/linkedin.png" width="100px" height="100px " style="border-radius:50%" />
                             </a>
@@ -160,12 +179,15 @@
                 </div>
             </div>
         </div>
+        <div style="max-width:960px;margin:auto;text-align:center;padding:0rem 0rem;color:#424949;">Made using&nbsp;
+            <i class="fa fa-coffee" style="font-size:14px"> </i>&nbsp;&nbsp;and&nbsp;
+            <i class="fa fa-music" style="font-size:14px"></i>
+        </div>
     </div>
-    <br>
-    <div style="max-width:960px;margin:auto;text-align:center;padding:0rem 0rem;color:#424949;">Made using&nbsp;
-        <i class="fa fa-coffee" style="font-size:14px"> </i>&nbsp;&nbsp;and&nbsp;
-        <i class="fa fa-music" style="font-size:14px"></i>
-    </div>
+
+
+
 </body>
+<script src="../js/bundle.js"></script>
 
 </html>

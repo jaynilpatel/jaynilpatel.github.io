@@ -801,7 +801,8 @@ a:active {
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #D4AC0D;
+    //background: #D4AC0D;
+    background: #222;
 }
 
 /* Notes Images */
@@ -810,7 +811,9 @@ a:active {
     max-width: 400px;
     height: auto;
 }
-
+.notes{
+    margin: 20px auto;
+}
 
 /* Header */
 canvas,

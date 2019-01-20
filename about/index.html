@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,700" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <link rel="icon" href="../static/user.png">
     <link rel="stylesheet" href="../css/mastercss.css">
     <!-- Chrome, Firefox OS and Opera -->
@@ -22,45 +25,69 @@
 
     <title>Jaynil</title>
 
+    <style>
+        
+    </style>
 </head>
 
-<body style="background-color:#222;color:white;">
-    <div>
-        <div style="padding:3.5rem 0rem 0rem 0rem;display:flex;flex-direction:row;justify-content:space-around;">
-            <h4>
-                <a style="color:white;text-decoration:none;" href="../index.html">Jaynil Patel</a>
-            </h4>
-        </div>
-        <div class="container" style="max-width: 960px; padding: 1.5rem 0rem 5rem 0rem">
+
+
+
+<body style="background-color:#222; color: white">
+
+    <canvas id="canvas" style="top: 0px !important; left: 0px !important"></canvas>
+    <div class="canvas-text-container"></div>
+    <div class="canvas-big-text"></div>
+    <div class="canvas-text"></div>
+    <div id="overlay">
+        <div class="container" id="header">
             <center>
+                <a style="color:white;text-decoration:none;" href="../index.html">
+                    <h3> Jaynil Patel</h3>
+                </a>
                 <div class="row">
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../about/index.html">about</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../about/index.html">
+                            <h4>about</h4>
+                        </a>
                     </div>
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../contact/index.html">contact</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../contact/index.html">
+                            <h4>contact</h4>
+                        </a>
                     </div>
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../notes/index.html">notes</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../notes/index.html">
+                            <h4>notes</h4>
+                        </a>
                     </div>
-                    <div class="col">
-                        <a style="color:white;text-decoration:none;" href="../journal/index.html">journal</a>
+                    <div class="col-3">
+                        <a style="color:white;text-decoration:none;" href="../journal/index.html">
+                            <h4>journal</h4>
+                        </a>
                     </div>
                 </div>
             </center>
-        </div>
-        <div style="margin:0 auto;max-width:960px;padding:1.55rem 1.1625rem;padding-top:0;">
-            <div>
-                <div style="text-align:center;">
-                    <div style="padding-bottom:40px;">
-                        <span style="-ms-transform-origin:25%;-webkit-transform:rotate(45deg);
+
+            <div style="text-align:center;">
+                <div style="padding-bottom:40px; padding-top: 10vw">
+                    <span style="-ms-transform-origin:25%;-webkit-transform:rotate(45deg);
                             -ms-transform:rotate(45deg);-webkit-transform-origin:25%;z-index:-1;position:absolute;
                             transform-origin:5%;border-top:1px solid #D4AC0D;width:80px;transform:rotate(45deg);"></span>
                         <h2>about</h2>
-                        <style></style>
-                    </div>
                 </div>
-                <div style="max-width:1000px; text-align:justify">
+            </div>
+            
+        </div>
+
+
+
+        <div class="container">
+            <div style="text-align:center;">
+                <div style="margin:0 auto;max-width:960px;padding:1.55rem 0.1rem;">
+                    <div style="max-width:1000px; text-align:left; color: white; font-size: 1rem">
+        
+                        <div style="max-width:1000px; text-align:justify">
                     <p>
                         <h4>hello! i'm jaynil <br><span style="font-size: 14px"><i class="fa fa-map-marker-alt" style="color:; font-size:14px"></i> Vadodara, India</span></h4>
 
@@ -93,13 +120,21 @@
                         width:0;right:9.1em;bottom:15em;display:inline;z-index:-1;border-left-color:transparent;
                         border-right-color:transparent;border-bottom-color:#D4AC0D;color:#222;"></div>
                 </div>
+                    </div>
+        
+                </div>
             </div>
+            
         </div>
         <div style="max-width:960px;margin:auto;text-align:center;padding:0rem 0rem;color:#424949;">Made using&nbsp;
             <i class="fa fa-coffee" style="font-size:14px"> </i>&nbsp;&nbsp;and&nbsp;
             <i class="fa fa-music" style="font-size:14px"></i>
         </div>
     </div>
+
+
+
 </body>
+<script src="../js/bundle.js"></script>
 
 </html>
