@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+
+<body>
+
+  <!-- Button trigger modal -->
+  <center>
+    <br>
+    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Inquiry
+    </button>
+    <br><br>
+    <a href="https://docs.google.com/spreadsheets/d/1lPCvQ-kGK7K8vB7VdiBH8LMLm290VOazwFKstGz9_UE/edit?usp=sharing"
+      target="_blank">
+      <h4>View Google Sheet</h4>
+    </a>
+  </center>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 600px;">
+      <div class="modal-content">
+        <div class="modal-header" style="background:#2471A3;color:#fff">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Admission Inquiry 2019-20</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:#fff;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="submit-to-google-sheet" id="form1">
+            <!-- <input name="email" type="email" placeholder="Email" required>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+            <button type="submit">Send</button> -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="name">Name</span>
+              </div>
+              <input type="text" name="Name" class="form-control" placeholder="Enter Your Name" required>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="email">Email id</span>
+              </div>
+              <input type="email" name="Email" class="form-control" placeholder="Enter Email Address" required>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="mobile" >Mobile</span>
+              </div>
+              <input type="tel" minlength="10" maxlength="10" name="Mobile" class="form-control" placeholder="Enter 10 digit Mobile No." pattern="[6789][0-9]{9}"required>
+            </div>
+            <table border="0" width="100%">
+              <thead>
+                <tr>
+                  <th colspan="2">Interested In:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="radio" name="Interested In" value="Civil"> Civil</td>
+                  <td><input type="radio" name="Interested In" value="Mechanical"> Mechanical</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="Interested In" value="Production"> Production</td>
+                  <td><input type="radio" name="Interested In" value="Electronics & Comm."> Electronics & Comm.</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="Interested In" value="Computer"> Computer</td>
+                  <td><input type="radio" name="Interested In" value="Information Technology"> Information Technology
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="Interested In" value="Electrical"> Electrical</td>
+                  <td><input type="radio" name="Interested In" value="Electronics"> Electronics</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <span><input type="checkbox" id="consent" required> I do not have any objection to receive call from BVM Engineering College</span>
+          </form>
+        </div>
+        <div class="modal-footer" style="padding:0.5rem">
+          <button type="button" id="closeModalBtn" class="btn btn-secondary" data-dismiss="modal" style="display: none">Close</button>
+          <button type="submit" id="submitBtn" form="form1" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="modal-footer" style="justify-content:flex-start">
+          <span style="font-size:12px;">Call : 02692-230-104&nbsp;&nbsp;&nbsp;Email : principal@bvmengineering.ac.in </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw_hThPV1-MnB5rT0ubfQf6G4JTX2nwoIBVxLT7SDkrZmkrS3E/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      $("#closeModalBtn").click();
+      fetch(scriptURL, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+        .then(Swal.fire({
+          type: 'success',
+          title: 'Saved',
+          text: 'You will be contact soon...',
+        }).then(() => {
+          document.getElementById("form1").reset();
+        })
+        )
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
