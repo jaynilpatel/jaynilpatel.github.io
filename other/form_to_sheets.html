@@ -21,13 +21,13 @@
   <!-- Button trigger modal -->
   <center>
     <br>
-    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    <button style="font-size: 22px;" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
       Inquiry
     </button>
     <br><br>
     <a href="https://docs.google.com/spreadsheets/d/1lPCvQ-kGK7K8vB7VdiBH8LMLm290VOazwFKstGz9_UE/edit?usp=sharing"
       target="_blank">
-      <h4>View Google Sheet</h4>
+      <h5>View Google Sheet</h5>
     </a>
   </center>
   <!-- Modal -->
@@ -35,7 +35,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 600px;">
       <div class="modal-content">
-        <div class="modal-header" style="background:#2471A3;color:#fff">
+        <div class="modal-header" style="background:rgb(2, 114, 235);color:#fff">
           <h5 class="modal-title" id="exampleModalCenterTitle">Admission Inquiry 2019-20</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true" style="color:#fff;">&times;</span>
@@ -50,22 +50,25 @@
             <button type="submit">Send</button> -->
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="name">Name</span>
+                <span class="input-group-text" id="name" style="min-width:75px">Name</span>
               </div>
               <input type="text" name="Name" class="form-control" placeholder="Enter Your Name" required>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="email">Email id</span>
+                <span class="input-group-text" id="email" style="min-width:75px">Email</span>
               </div>
-              <input type="email" name="Email" class="form-control" placeholder="Enter Email Address" required>
+              <input type="email" name="Email" class="form-control" placeholder="Enter Your Email Address" required>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="mobile" >Mobile</span>
+                <span class="input-group-text" id="mobile" style="min-width:75px">Mobile</span>
               </div>
-              <input type="tel" minlength="10" maxlength="10" name="Mobile" class="form-control" placeholder="Enter 10 digit Mobile No." pattern="[6789][0-9]{9}"required>
+              <input type="tel" minlength="10" maxlength="10" name="Mobile" class="form-control"
+                placeholder="Enter 10 digit Mobile No." pattern="[6789][0-9]{9}" required>
             </div>
+            <input type="text" style="display:none" name="Interested In" id="interested">
+
             <table border="0" width="100%">
               <thead>
                 <tr>
@@ -74,34 +77,45 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="radio" name="Interested In" value="Civil"> Civil</td>
-                  <td><input type="radio" name="Interested In" value="Mechanical"> Mechanical</td>
+                  <td><input type="checkbox" name="branch" value="Civil"> Civil</td>
+                  <td><input type="checkbox" name="branch" value="Mechanical"> Mechanical</td>
                 </tr>
                 <tr>
-                  <td><input type="radio" name="Interested In" value="Production"> Production</td>
-                  <td><input type="radio" name="Interested In" value="Electronics & Comm."> Electronics & Comm.</td>
-                </tr>
-                <tr>
-                  <td><input type="radio" name="Interested In" value="Computer"> Computer</td>
-                  <td><input type="radio" name="Interested In" value="Information Technology"> Information Technology
+                  <td><input type="checkbox" name="branch" value="Production"> Production</td>
+                  <td><input type="checkbox" name="branch" value="Electronics & Comm."> Electronics & Comm.
                   </td>
                 </tr>
                 <tr>
-                  <td><input type="radio" name="Interested In" value="Electrical"> Electrical</td>
-                  <td><input type="radio" name="Interested In" value="Electronics"> Electronics</td>
+                  <td><input type="checkbox" name="branch" value="Computer"> Computer</td>
+                  <td><input type="checkbox" name="branch" value="Information Technology"> Information
+                    Technology
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="branch" value="Electrical"> Electrical</td>
+                  <td><input type="checkbox" name="branch" value="Electronics"> Electronics</td>
+                </tr>
+                <tr>
+                  <td id="branchErr" style="display:none;color:crimson;font-size: 12px;" colspan="2">*Select alteast one branch
+                  </td>
                 </tr>
               </tbody>
-            </table>
-            <br>
-            <span><input type="checkbox" id="consent" required> I do not have any objection to receive call from BVM Engineering College</span>
+            </table><br>
+            <span><input type="checkbox" id="consent"> I do not have any objection to receive call from BVM
+              Engineering College</span>
+            <span id="consentErr" style="color:crimson; display:none;font-size: 12px;">*Please check the above box to
+              proceed</span>
           </form>
         </div>
-        <div class="modal-footer" style="padding:0.5rem">
-          <button type="button" id="closeModalBtn" class="btn btn-secondary" data-dismiss="modal" style="display: none">Close</button>
+        <div class="modal-footer" style="padding:0.5rem;justify-content:center">
+          <button type="button" id="closeModalBtn" class="btn btn-secondary" data-dismiss="modal"
+            style="display: none">Close</button>
           <button type="submit" id="submitBtn" form="form1" class="btn btn-primary">Submit</button>
         </div>
-        <div class="modal-footer" style="justify-content:flex-start">
-          <span style="font-size:12px;">Call : 02692-230-104&nbsp;&nbsp;&nbsp;Email : principal@bvmengineering.ac.in </span>
+        <div class="modal-footer" style="justify-content:space-between">
+          <span style="font-size:12px;  display: flex">Call : 02692-230-104</span><span
+            style="font-size:12px; display: flex">Email : principal@bvmengineering.ac.in
+          </span>
         </div>
       </div>
     </div>
@@ -112,20 +126,45 @@
 
     form.addEventListener('submit', e => {
       e.preventDefault();
-      $("#closeModalBtn").click();
-      fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
-        .then(Swal.fire({
-          type: 'success',
-          title: 'Saved',
-          text: 'You will be contact soon...',
-        }).then(() => {
-          document.getElementById("form1").reset();
-        })
-        )
-        .catch(error => console.error('Error!', error.message))
+      var interests = [];
+      $.each($("input[name='branch']:checked"), function () {
+        interests.push($(this).val());
+      });
+      var interested = interests.join(", ")
+      validation = true;
+      if (interested.length == 0) {
+        validation = false;
+        $("#branchErr").css("display", "inline-block");
+      }else{
+        $("#branchErr").css("display", "none");
+      }
+      if ($("#consent").prop("checked") == false) {
+        validation = false;
+        $("#consentErr").css("display", "inline-block");
+      }else{
+        $("#consentErr").css("display", "none");
+      }
+      //console.log("Interested:", interested)
+      $("#interested").val(interested);
+      if (validation === true) {
+        $("#closeModalBtn").click();
+        fetch(scriptURL, {
+            method: 'POST',
+            body: new FormData(form)
+          })
+          .then(Swal.fire({
+            type: 'success',
+            title: 'Saved',
+            text: 'You will be contact soon...',
+          }).then(() => {
+            document.getElementById("form1").reset();
+            $.each($("input[type='checkbox']:checked"), function () {
+              $(this).prop('checked', false);
+            });
+            $("#branchErr").css("display", "none");
+          }))
+          .catch(error => console.error('Error!', error.message))
+      }
     })
   </script>
 </body>
