@@ -815,6 +815,11 @@ a:active {
     margin: 20px auto;
 }
 
+.notes .web-project-img{
+    width: 100%;
+    max-width: 100%;
+}
+
 /* Header */
 canvas,
 #overlay {
