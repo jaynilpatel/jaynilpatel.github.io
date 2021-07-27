@@ -15,7 +15,7 @@
 
 .school-location,
 .school-dates,
-.state-abbr, .organization-dates, .project-tools, .publication-journal {
+.state-abbr, .organization-dates, .project-tools, .publication-research {
   margin-left: 5px;
   font-style: italic;
 }
@@ -230,7 +230,7 @@ section h2 {
 }
 
 @media (max-width: 900px) {
-  .publication-journal {
+  .publication-research {
     display: block;
     text-align: center;
   }
