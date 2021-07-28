@@ -783,7 +783,7 @@ a:active {
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 5px;
 }
 
 /* Track */
@@ -795,14 +795,15 @@ a:active {
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #222222;
+    background: #333333;
 }
-
+::-webkit-scrollbar-thumb:horizontal{
+    background: #222;
+}
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    //background: #D4AC0D;
-    background: #222;
+    background: #D4AC0D;
 }
 
 /* projects Images */
